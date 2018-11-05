@@ -170,9 +170,6 @@ void vendor_load_properties()
     }
     device = GetProperty("ro.product.device", "");
     // INFO("Found radio id: %s setting build properties for %s device\n", radio.c_str(), device.c_str());
-
-    // Init a dummy BT MAC address, will be overwritten later
-    property_set("ro.boot.btmacaddr", "00:00:00:00:00:00");
 }
 
 void cdma_properties()
