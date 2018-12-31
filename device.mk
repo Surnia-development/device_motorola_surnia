@@ -61,5 +61,9 @@ PRODUCT_PACKAGES += \
     sensors.msm8916 \
     sensorhub.msm8916
 
+# Vendor security patch level
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.lineage.build.vendor_security_patch=2018-12-05
+
 # Common Android Go configurations
 $(call inherit-product, build/target/product/go_defaults.mk)
