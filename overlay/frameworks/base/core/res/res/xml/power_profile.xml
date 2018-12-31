@@ -28,6 +28,8 @@
         <value>1094400</value>
         <value>1152000</value>
         <value>1209600</value>
+        <value>1363200</value>
+        <value>1401600</value>
     </array>
     <item name="cpu.idle">2</item>
     <item name="cpu.awake">3.5</item>
