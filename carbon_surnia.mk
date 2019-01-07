@@ -44,4 +44,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 
 # Maintainer string
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.carbon.maintainer="Razhor & facuarmo"
+    ro.carbon.maintainer="Razhor and facuarmo"
