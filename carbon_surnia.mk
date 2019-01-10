@@ -1,3 +1,4 @@
+
 # Copyright (C) 2014-2016 The CyanogenMod Project
 #               2017 The LineageOS Project
 #
@@ -15,16 +16,32 @@
 
 $(call inherit-product, device/motorola/surnia/full_surnia.mk)
 
+# Inherit some common CarbonROM stuff.
+$(call inherit-product, vendor/carbon/config/gsm.mk)
+$(call inherit-product, vendor/carbon/config/common.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_l.mk)
+
 # Boot animation
 TARGET_SCREEN_WIDTH := 540
 TARGET_SCREEN_HEIGHT := 960
+TARGET_BOOT_ANIMATION_RES := 540
+TARGET_BOOTANIMATION_HALF_RES := true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := surnia
-PRODUCT_NAME := bootleg_surnia
+PRODUCT_NAME := carbon_surnia
 PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := surnia
 
+# Using harpia fingerprint to pass SafetyNet
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="harpia-user 7.1.1 NPIS26.48-36-5 12 release-keys"
+    BUILD_FINGERPRINT := motorola/harpia/harpia:7.1.1/NPIS26.48-36-5/12:user/release-keys
+
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="Moto E LTE (2nd gen)"
+
+# Maintainer string
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.carbon.maintainer="Razhor & facuarmo"
