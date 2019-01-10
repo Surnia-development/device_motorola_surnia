@@ -34,10 +34,10 @@ PRODUCT_BRAND := Motorola
 PRODUCT_MANUFACTURER := Motorola
 PRODUCT_RELEASE_NAME := surnia
 
-# Using harpia fingerprint to pass SafetyNet
+# Overriding fingerprint to pass SafetyNet
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="harpia-user 7.1.1 NPIS26.48-36-5 12 release-keys"
-    BUILD_FINGERPRINT := motorola/harpia/harpia:7.1.1/NPIS26.48-36-5/12:user/release-keys
+    PRIVATE_BUILD_DESC="surnia-user 5.1 LPI23.29-17.5 5 release-keys"
+    BUILD_FINGERPRINT := motorola/surnia_verizon/surnia_cdma:5.1/LPI23.29-17.5/5:user/release-keys
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="Moto E LTE (2nd gen)"
