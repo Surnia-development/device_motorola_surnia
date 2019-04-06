@@ -15,4 +15,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/carbon_surnia.mk
+    $(LOCAL_DIR)/cosp_surnia.mk
